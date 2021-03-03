@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 23, 2019, 9:30:23 PM
+    Author     : summer
+*/
+
+.minMaxTextField {
+        -fx-padding: 0;
+    -fx-min-width: 75;
+    -fx-max-width: 75;
+        -fx-min-height: 25;
+    -fx-max-height: 25;
+    -fx-background-color: white;
+    -fx-font: 12px serif;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-size: 1;
+    -fx-border-radius: 4;
+}
+
+.otherTextFields {
+    -fx-padding: 0;
+    -fx-min-width: 200;
+    -fx-max-width: 200;
+    -fx-min-height: 25;
+    -fx-max-height: 25;
+    -fx-background-color: white;
+    -fx-font: 12px serif;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-size: 1;
+    -fx-border-radius: 4;
+}
+
+.addPartLabel {
+    -fx-text-fill: black;
+    -fx-font: bold 18px serif;
+    font-weight: bold;
+}
+
+.otherLabels {
+        -fx-text-fill: black;
+    -fx-font: normal 12px serif;
+    font-weight: normal;
+}
+
+.radio-button .radio {
+            -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 9;
+        
+}
+
+.radio-button {
+    -fx-text-fill: black;
+}

@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 23, 2019, 4:52:04 PM
+    Author     : summer
+*/
+
+.button { 
+    -fx-background-color: #E2E7EB;
+    -fx-font: 14px serif;
+    -fx-border-color: black;
+    -fx-border-radius: 4;
+    -fx-text-fill: black;
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-font: bold 14px serif;   
+}
+
+.table-view .column-header-background .label{
+    -fx-font-weight:bold;
+    -fx-text-fill: black;
+    -fx-font-size: 12;
+}
+
+.label {
+    -fx-text-fill: black;
+    -fx-font: bold 18px serif;
+    font-weight: bold;
+}
+
+.table-view .column-header .arrow{
+    -fx-background-color:  black;
+    -fx-padding: 0;
+}
+
+.table-view .column-header * {
+    -fx-border-color: black;
+    -fx-border-width: .1;
+    -fx-background-color:#E2E7EB;
+    -fx-padding: 0; 
+}
+
+.table-view * {
+    -fx-background-color: white;
+    -fx-accent: white;
+    -fx-text-fill: black;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-font: 12px serif;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-size: 1;
+    -fx-border-radius: 4;
+}
+
+
+
+

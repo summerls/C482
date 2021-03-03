@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="1300.0" style="-fx-background-color: #D8DCDF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorysystem.inventoryManagementSystemController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="262.0" minHeight="10.0" prefHeight="163.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="536.0" minHeight="350.0" prefHeight="3.0" vgrow="NEVER" />
+    <RowConstraints maxHeight="114.0" minHeight="10.0" prefHeight="114.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D8DCDF;" GridPane.rowIndex="1">
+         <children>
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#d8dcdf" height="300.0" layoutX="30.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="575.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="25.0" />
+            <TableView fx:id="partsTable" editable="true" layoutX="225.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="130.0" prefWidth="528.0" stylesheets="@inventoryManagementSystem.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+              <columns>
+                <TableColumn fx:id="partIdColumn" maxWidth="132.0" minWidth="132.0" prefWidth="132.0" resizable="false" text="Part ID" />
+                <TableColumn fx:id="partNameColumn" maxWidth="132.0" minWidth="132.0" prefWidth="132.0" resizable="false" text="Part Name" />
+                  <TableColumn fx:id="partLevelColumn" maxWidth="132.0" minWidth="132.0" prefWidth="132.0" resizable="false" text="Inventory Level" />
+                  <TableColumn fx:id="partPriceColumn" maxWidth="132.0" minWidth="132.0" prefWidth="132.0" resizable="false" text="Price/Cost per Unit" />
+              </columns>
+
+            </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="64.0" layoutY="42.0" prefHeight="38.0" prefWidth="80.0" stylesheets="@inventoryManagementSystem.css" text="Parts" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="partSearchField" layoutX="420.0" layoutY="48.0" prefHeight="25.0" prefWidth="167.0" stylesheets="@inventoryManagementSystem.css" />
+            <Button id="partAddColumn" fx:id="partAddButton" layoutX="325.0" layoutY="269.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#partAddButtonClicked" prefHeight="30.0" prefWidth="74.0" stylesheets="@inventoryManagementSystem.css" text="Add">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="partModifyButton" fx:id="partModifyButton" layoutX="408.0" layoutY="269.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#partModifyButtonClicked" prefHeight="30.0" prefWidth="74.0" stylesheets="@inventoryManagementSystem.css" text="Modify">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button id="partDeleteButton" fx:id="partDeleteButton" layoutX="492.0" layoutY="269.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#partDeleteButtonClicked" prefHeight="30.0" prefWidth="74.0" stylesheets="@inventoryManagementSystem.css" text="Delete">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="partSearchButton" layoutX="339.0" layoutY="46.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#partSearchButtonClicked" prefHeight="30.0" prefWidth="74.0" stylesheets="@inventoryManagementSystem.css" text="Search">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#d8dcdf" height="300.0" layoutX="30.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="575.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="25.0" />
+            <TableView id="productsTable" fx:id="productTable" editable="true" layoutX="50.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="528.0" stylesheets="@inventoryManagementSystem.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="100.0">
+               <columns>
+                  <TableColumn fx:id="productIdColumn" maxWidth="125.0" minWidth="150.0" prefWidth="125.0" resizable="false" text="Product ID" />
+                  <TableColumn fx:id="productNameColumn" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" resizable="false" text="Product Name" />
+                  <TableColumn fx:id="productLevelColumn" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" resizable="false" text="Inventory Level" />
+                  <TableColumn fx:id="productPriceColumn" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" resizable="false" text="Price per Unit" />
+               </columns>
+            </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="42.0" prefHeight="38.0" prefWidth="108.0" stylesheets="@inventoryManagementSystem.css" text="Products" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="productSearchField" layoutX="420.0" layoutY="49.0" prefHeight="25.0" prefWidth="167.0" stylesheets="@inventoryManagementSystem.css" />
+            <Button fx:id="productAddButton" layoutX="325.0" layoutY="269.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addProductButtonClicked" prefHeight="30.0" prefWidth="74.0" stylesheets="@inventoryManagementSystem.css" text="Add">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="productModifyButton" layoutX="408.0" layoutY="269.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#modifyProductButtonClicked" prefHeight="30.0" prefWidth="74.0" stylesheets="@inventoryManagementSystem.css" text="Modify">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="productDeleteButton" layoutX="492.0" layoutY="269.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#productDeleteButtonClicked" prefHeight="30.0" prefWidth="74.0" stylesheets="@inventoryManagementSystem.css" text="Delete">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="productSearchButton" layoutX="334.0" layoutY="45.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#productSearchButtonClicked" prefHeight="30.0" prefWidth="74.0" stylesheets="@inventoryManagementSystem.css" text="Search">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="65.0" prefWidth="642.0">
+         <children>
+            <Label layoutX="91.0" layoutY="48.0" prefHeight="27.0" prefWidth="274.0" stylesheets="@inventoryManagementSystem.css" text="Inventory Management System" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="61.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
